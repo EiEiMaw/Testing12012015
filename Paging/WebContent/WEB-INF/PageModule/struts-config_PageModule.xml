@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+<struts-config>
+
+<!-- ======================================== Form bean definition -->
+    <!-- Configuration example
+    <form-beans>
+      <form-bean name="_userForm"
+                 type="jp.terasoluna.sample.common.form.UserForm" />
+      <form-bean name="_dynaValidatorForm"
+                 type="jp.terasoluna.fw.web.struts.form.DynaValidatorActionFormEx" >
+        <form-property name="userId" type="java.lang.String"/>
+      </form-bean>
+    </form-beans>
+    -->
+    <form-beans>
+    <form-bean name="_PageModuleForm" type="jp.co.nttdata.project.pagemodule.web.form.PageModuleForm"/></form-beans>
+
+
+<!-- ======================================== Action mapping definition -->
+  <action-mappings type="jp.terasoluna.fw.web.struts.action.ActionMappingEx">
+
+    <!-- <action path="/welcome" parameter="/welcome.jsp"/> -->
+
+  <action name="_PageModuleForm" path="/PageModule/Initial" validate="false"><forward name="success" path="/PageModule/FistPage.jsp"/></action><action input="/PageModule/FistPage.jsp" name="_PageModuleForm" path="/PageModule/pageAction" validate="false"><forward name="success" path="/PageModule/FistPage.jsp"/></action></action-mappings>
+
+</struts-config>

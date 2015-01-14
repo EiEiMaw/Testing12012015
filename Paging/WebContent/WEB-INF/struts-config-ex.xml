@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+<struts-config>
+
+	<!-- ======================================== ACtion mapping definition -->
+	<action-mappings type="jp.terasoluna.fw.web.struts.action.ActionMappingEx">
+
+		<action path="/errorJS"/>
+		<action path="/tokenErrorJS"/>
+
+	</action-mappings>
+
+</struts-config>

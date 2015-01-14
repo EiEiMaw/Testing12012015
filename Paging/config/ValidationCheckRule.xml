@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.terasoluna.jp/tools/ide3/model/validation_check_rule"
+	xsi:schemaLocation="http://www.terasoluna.jp/tools/ide3/model/validation_check_rule schema/ValidationCheckRule.xsd ">
+	<check name="required" logicalName="Required input" comment="Required check" />
+	<check name="byte" logicalName="byte type" comment="byte type check" />
+	<check name="short" logicalName="short type" comment="short type check" />
+	<check name="integer" logicalName="integer type" comment="integer type check" />
+	<check name="long" logicalName="long type" comment="long type check" />
+	<check name="float" logicalName="float type" comment="float type check" />
+	<check name="double" logicalName="double type" comment="double type check" />
+	<check name="email" logicalName="mail address" comment="email address format check" />
+	<check name="creditCard" logicalName="Credit card" comment="Credit card number format check" />
+	<check name="minlength" logicalName="Minimum number of characters" comment="Minimum character check">
+		<param name="minlength" logicalName="Minimum length" comment="Minimum number of characters" type="string"
+			isUsedInMessage="true" displayOrder="1" />
+	</check>
+	<check name="maxlength" logicalName="Maximum number of characters" comment="Maximum number of characters check">
+		<param name="maxlength" logicalName="Maximum length" comment="Maximum number of characters" type="string"
+			isUsedInMessage="true" displayOrder="1" />
+	</check>
+	<check name="mask" logicalName="Regular expression" comment="Regular expression check">
+		<param name="mask" logicalName="Regular expression conditions" comment="Regular expression conditions" type="string"
+			isUsedInMessage="false" displayOrder="1" />
+	</check>
+	<check name="validwhen" logicalName="Specified conditions" comment="Specified conditions check">
+		<param name="test" logicalName="Specified conditions" comment="Specified conditions" type="string"
+			isUsedInMessage="false" displayOrder="1" />
+	</check>
+	<check name="date" logicalName="Date type" comment="Date type check">
+		<param name="datePattern" logicalName="Date format" comment="Date format"
+			type="string" isUsedInMessage="false" displayOrder="1" />
+		<param name="datePatternStrict" logicalName="Strict date check"
+			comment="Strict check yes/no" type="flag" initValue="false" isUsedInMessage="false"
+			displayOrder="2" />
+	</check>
+	<check name="intRange" logicalName="integer type range" comment="int type range check">
+		<param name="min" logicalName="Minimum value" comment="Minimum value" type="string"
+			isUsedInMessage="true" displayOrder="1" />
+		<param name="max" logicalName="Maximum value" comment="Maximum value" type="string"
+			isUsedInMessage="true" displayOrder="2" />
+	</check>
+	<check name="doubleRange" logicalName="double type range" comment="double type range check">
+		<param name="min" logicalName="Minimum value" comment="Minimum value" type="string"
+			isUsedInMessage="true" displayOrder="1" />
+		<param name="max" logicalName="Maximum value" comment="Maximum value" type="string"
+			isUsedInMessage="true" displayOrder="2" />
+	</check>
+	<check name="floatRange" logicalName="float type range" comment="float type range check">
+		<param name="min" logicalName="Minimum value" comment="Minimum value" type="string"
+			isUsedInMessage="true" displayOrder="1" />
+		<param name="max" logicalName="Maximum value" comment="Maximum value" type="string"
+			isUsedInMessage="true" displayOrder="2" />
+	</check>
+	<check name="url" logicalName="URL" comment="url format check">
+		<param name="allow2slashes" logicalName="Allow the double slash" comment="Allow the double slash"
+			type="flag" initValue="false" isUsedInMessage="false" displayOrder="1" />
+		<param name="allowschemes" logicalName="Allow any scheme" comment="Scheme allowed"
+			type="flag" initValue="false" isUsedInMessage="false" displayOrder="2" />
+		<param name="nofragments" logicalName="Do not allow the addition of fragments" comment="URL split restriction"
+			type="flag" initValue="false" isUsedInMessage="false" displayOrder="3" />
+		<param name="schemes" logicalName="Permitted scheme" comment="Permitted scheme"
+			type="string" isUsedInMessage="false" displayOrder="4" />
+	</check>
+	<check name="hankakuString" logicalName="Byte string" comment="Byte string check" />
+	<check name="hankakuKanaString" logicalName="Half-width kana string" comment="Half-width kana string check" />
+	<check name="zenkakuString" logicalName="Double-byte character string" comment="Double-byte character string check" />
+	<check name="zenkakuKanaString" logicalName="Full-width Kana string" comment="Full-width Kana string check" />
+	<check name="numericString" logicalName="Numeric string" comment="Numeric string check" />
+	<check name="alphaNumericString" logicalName="Alphanumeric string" comment="Alphanumeric string check" />
+	<check name="capAlphaNumericString" logicalName="Uppercase alphanumeric string"
+		comment="Uppercase alphanumeric string check" />
+	<check name="prohibited" logicalName="Prohibited string" comment="Prohibited string check">
+		<param name="chars" logicalName="Prohibited input character" comment="Prohibited input character"
+			type="string" isUsedInMessage="true" displayOrder="1" />
+	</check>
+	<check name="stringLength" logicalName="String length" comment="String length check">
+		<param name="stringLength" logicalName="No of characters in input string" comment="No of characters in input string"
+			type="string" isUsedInMessage="true" displayOrder="1" />
+	</check>
+	<check name="byteLength" logicalName="byte string length" comment="byte string length check">
+		<param name="byteLength" logicalName="Number of bytes" comment="Number of bytes" type="string"
+			isUsedInMessage="true" displayOrder="1" />
+		<param name="stringLength4msg" logicalName="Number of digits on display(If different from the number of bytes)"
+			comment="Input string number" type="string" isUsedInMessage="true" displayOrder="2" />
+		<param name="encoding" logicalName="Bytes conversion character code" comment="Bytes conversion character code"
+			type="string" isUsedInMessage="false" displayOrder="3" />
+	</check>
+	<check name="byteRange" logicalName="byte string length range" comment="byte string length range check">
+		<param name="minByte" logicalName="Minimum number of bytes" comment="Minimum number of bytes"
+			type="string" isUsedInMessage="true" displayOrder="1" />
+		<param name="maxByte" logicalName="Maximum number of bytes" comment="Maximum number of bytes"
+			type="string" isUsedInMessage="true" displayOrder="2" />
+		<param name="encoding" logicalName="Bytes conversion character code" comment="Bytes conversion character code"
+			type="string" isUsedInMessage="false" displayOrder="3" />
+	</check>
+	<check name="dateRange" logicalName="Date range" comment="Date range check">
+		<param name="startDate" logicalName="Start date" comment="Start date" type="string"
+			isUsedInMessage="true" displayOrder="1" />
+		<param name="endDate" logicalName="End date" comment="End date" type="string"
+			isUsedInMessage="true" displayOrder="2" />
+		<param name="datePattern" logicalName="Date format" comment="Date format"
+			type="string" isUsedInMessage="false" displayOrder="3" />
+		<param name="datePatternStrict" logicalName="Strict date check"
+			comment="Strict check yes/no" type="flag" initValue="false" isUsedInMessage="false"
+			displayOrder="4" />
+	</check>
+	<check name="number" logicalName="Numerical type" comment="Numerical type check">
+		<param name="integerLength" logicalName="Integer digits part" comment="Integer digits part"
+			type="string" isUsedInMessage="true" displayOrder="1" />
+		<param name="scale" logicalName="Decimal places part" comment="Decimal places part" type="string"
+			isUsedInMessage="true" displayOrder="2" />
+		<param name="isAccordedInteger" logicalName="Match the number of digits in integer part" comment="Match the number of digits in integer part check"
+			type="flag" initValue="false" isUsedInMessage="false" displayOrder="3" />
+		<param name="isAccordedScale" logicalName="Match decimal places part" comment="Match decimal places part"
+			type="flag" initValue="false" isUsedInMessage="false" displayOrder="4" />
+	</check>
+</checks>

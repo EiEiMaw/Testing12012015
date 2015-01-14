@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Definition of SqlMapConfig -->
+<!DOCTYPE sqlMapConfig PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+    <!-- In case of partitioning the sqlMap, since it is necessary to consider overlapping of sqlID -->
+    <!-- useStatementNamespaces=true is set in default settings -->
+    <!-- comment out the below in case partition of sqlMap in the namespace is not required -->
+    <settings useStatementNamespaces="true"/>
+    <sqlMap resource="sqlMap.xml"/>
+<sqlMap resource="sqlMap_PageModule.xml"/></sqlMapConfig>

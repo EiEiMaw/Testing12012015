@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+   - Property settings for JNDI.
+   - The current settings are done with Oracle and PostgreSQL as the standard. Please use the settings matching the development environment.
+   - Please refer to[Description Format]and replace [Configuration Example]values matching the development environment.
+   - 
+   - If JNDI is not used, please replace the Bean definition of DataSource in [/webapps/WEB-INF/applicationContext.xml]
+-->
+
+<!-- 
+   - [Settings when the DataSource is Oracle]
+   - [Description Format]
+   - driverClassName=[name of the driver]
+   - username=[login name of the database]
+   - password=[login password of the database]
+   - url=jdbc:oracle:thin:@[IP address of database]:[port number]:[name of the instance]
+   - [Settings Example]
+-->
+<Context>
+  <Resource
+     name="jdbc/TerasolunaSampleDataSource"
+     type="javax.sql.DataSource"
+     driverClassName="oracle.jdbc.OracleDriver"
+     username="xxxxx"
+     password="xxxxx"
+     url="jdbc:oracle:thin:@xxx.xxx.xxx.xxx:1521:sampledb"
+     maxIdle="2"
+     maxWait="5000"
+     maxActive="4"/>
+</Context>
+
+<!-- 
+   - [Settings when the DataSource is postgresql]
+   - [Description Format]
+   - driverClassName=[name of the driver]
+   - username=[login name of the database]
+   - password=[login password of the database]
+   - url=jdbc:postgresql://[IP address of database]:[port number]/[name of the instance]
+   - [Settings Example]
+-->
+<!-- 
+<Context>
+  <Resource
+     name="jdbc/TerasolunaSampleDataSource"
+     type="javax.sql.DataSource"
+     driverClassName="org.postgresql.Driver"
+     username="postgres"
+     password=""
+     url="jdbc:postgresql://127.0.0.1:5432/sampledb"
+     maxIdle="2"
+     maxWait="5000"
+     maxActive="4"/>
+</Context>
+-->
+
+<!-- 
+   - [Settings when the DataSource is hsqldb]
+   - [Description Format]
+   - driverClassName=[name of the driver]
+   - username=[login name of the database]
+   - password=[login password of the database]
+   - url=jdbc:hsqldb:hsql://[IP address of database]:[port number]/[name of the instance]
+   - [Settings Example]
+-->
+<!--
+<Context>
+  <Resource
+     name="jdbc/TerasolunaSampleDataSource"
+     type="javax.sql.DataSource"
+     driverClassName="org.hsqldb.jdbcDriver"
+     username="sa"
+     password=""
+     url="jdbc:hsqldb:hsql://127.0.0.1:9001/terasoluna"
+     maxIdle="2"
+     maxWait="5000"
+     maxActive="4"/>
+</Context>
+-->
+
+<!--
+   - [Settings when the DataSource is H2DB]
+   - [Description Format]
+   - driverClassName=[name of the driver]
+   - username=[login name of the database]
+   - password=[login password of the database]
+   - url=jdbc:h2:tcp://[IP address of database]:[port number]/[name of the instance]
+   - [Settings Example]
+-->
+<!--
+<Context>
+  <Resource
+     name="jdbc/TerasolunaSampleDataSource"
+     type="javax.sql.DataSource"
+     driverClassName="org.h2.Driver"
+     username="sa"
+     password="sa"
+     url="jdbc:h2:tcp://localhost/~/terasoluna"
+     maxIdle="2"
+     maxWait="5000"
+     maxActive="4"/>
+</Context>
+-->

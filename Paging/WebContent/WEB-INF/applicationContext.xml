@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+  <context:annotation-config/>
+
+<!-- ======================================== OSS patch definition -->
+  <!-- The patch to the bug (JXPATH-152) of commons-JXPath is activated.-->
+  <bean id="jxpathPatchActivator" class="jp.terasoluna.fw.beans.jxpath.JXPATH152PatchActivator"/>
+
+  <!-- Setting of basePackageName -->   
+  <context:component-scan base-package="jp.co.nttdata.project"/>
+   
+<!-- ======================================== Ajax setting -->
+	<bean id="delegateActionHandler" class="jp.terasoluna.fw.web.struts.action.handler.DefaultDelegateActionHandler"/>
+	<bean id="processPopulateHandler" class="jp.terasoluna.fw.ex.web.struts.action.handler.AjaxProcessHandler"/>
+
+    <bean class="jp.terasoluna.fw.ex.web.struts.ajax.json.JsonAjaxHandler"/>
+
+<!-- ======================================== Datasource setting -->
+  <!-- 
+     To run Tomcat using WTP, specify the database connection information in <ContextRoot>/META-INF/context.xml.
+     Also if JDBC connection is performed at Tomcat, pass the class path for jar of various JDBC drivers.
+  -->
+  <bean id="TerasolunaSampleDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+    <property name="jndiName">
+      <!-- Example of Tomcat -->
+      <value>java:comp/env/jdbc/TerasolunaSampleDataSource</value>
+      <!-- Example of AP server other than Tomcat -->
+      <!-- 
+      <value>jdbc/TerasolunaSampleDataSource</value>
+      -->
+    </property>
+  </bean>
+
+<!-- ======================================== Transaction・AOP definition -->
+  <tx:annotation-driven/>
+
+  <!-- Transaction Manager Definition -->
+  <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    <property name="dataSource" ref="TerasolunaSampleDataSource"/>
+  </bean>
+
+  <!-- Transaction Interceptor Definition -->
+  <!-- 
+    Define the method that performs the settings of Transaction and execution mode.
+    transaction-manager="transactionManager" can be omitted.
+  -->
+  <tx:advice id="transactionInterceptor">
+    <tx:attributes>
+      <tx:method name="execute*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+    </tx:attributes>
+  </tx:advice>
+
+  <!-- AOP Definition -->
+  <!-- 
+    Apply the interceptor to the Bean of the patterns specified below.
+    Note that it is applicable to the Bean defined in applicationContext.xml only
+   -->  
+  <aop:config>
+    <aop:pointcut expression="bean(*DAO)" id="daoBeans"/>
+    <aop:advisor advice-ref="transactionInterceptor" pointcut-ref="daoBeans"/>
+  </aop:config>
+
+<!-- ======================================== ResourceBundle definition -->
+  <!-- Use of Properties file -->
+  <!-- 
+    Set the message properties file with the basenames property.
+   -->  
+  <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+    <property name="basenames" value="application-messages, system-messages, messages, messages_PageModule"/>
+  </bean>
+
+<!-- ======================================== iBATIS definition -->
+  <!-- SqlMap definition -->
+  <bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+    <property name="configLocation" value="WEB-INF/sqlMapConfig.xml">
+    </property>
+    <property name="dataSource" ref="TerasolunaSampleDataSource"/>
+  </bean>
+
+   <!-- Definition of DAO for reference -->
+  <bean id="queryDAO" class="jp.terasoluna.fw.dao.ibatis.QueryDAOiBatisImpl">
+    <property name="sqlMapClient" ref="sqlMapClient"/>
+  </bean>
+  
+  <!-- Definition of DAO for update -->
+  <bean id="updateDAO" class="jp.terasoluna.fw.dao.ibatis.UpdateDAOiBatisImpl">
+    <property name="sqlMapClient" ref="sqlMapClient"/>
+  </bean>
+  
+  <!-- Definition of DAO for Stored Procedure -->
+  <bean id="spDAO" class="jp.terasoluna.fw.dao.ibatis.StoredProcedureDAOiBatisImpl">
+    <property name="sqlMapClient" ref="sqlMapClient"/>
+  </bean>
+  
+  <!-- Definition of DAO for row handler -->
+  <bean id="queryRowHandleDAO" class="jp.terasoluna.fw.dao.ibatis.QueryRowHandleDAOiBatisImpl">
+    <property name="sqlMapClient" ref="sqlMapClient"/>
+  </bean>
+
+</beans>

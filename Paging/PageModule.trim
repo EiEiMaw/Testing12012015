@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model.action="http:///model/action.ecore" xmlns:model.core="http:///model/core.ecore" xmlns:model.javabean="http:///model/javabean.ecore" xmlns:model.module="http:///model/module.ecore" xmlns:model.scope="http:///model/scope.ecore" xmlns:model.screendesign="http:///model/screendesign.ecore" xmlns:model.screenflow="http:///model/screenflow.ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <model.module:ModuleRoot id="1dacbff4-f72e-4e00-a277-5d9d657d17c6" logicalName="PageModule" name="PageModule">
+    <theContainedElements xsi:type="model.screenflow:MainFlowDefinition" id="480102f8-887a-40e3-b952-fcbb2a965a9e" logicalName="PageModuleScreen flow" name="PageModuleScreenFlow">
+      <theContainedElements xsi:type="model.core:DiagramElement" id="cb7d580e-9cd5-4f9f-a0f0-03cec9dcec89" name="PageModuleScreen flow"/>
+      <theContainedElements xsi:type="model.screenflow:InitialNode" id="6c939c3a-f509-4a9d-8f23-f68774811db4" logicalName="Start node01" name="Entry01">
+        <theOutgoingTransitions id="b0b55f25-e82c-4a7d-829c-61c042c88769" logicalName="InitialTransaction" name="InitialTransaction" theActionSet="42ce0c6e-b1e2-4ee8-a830-e525c6db3abc" theDestination="f3232d37-ab91-4f97-b615-f81a0a6d05a3"/>
+      </theContainedElements>
+      <theContainedElements xsi:type="model.screenflow:Page" id="f3232d37-ab91-4f97-b615-f81a0a6d05a3" logicalName="FistPage" name="FistPage">
+        <theContainedElements xsi:type="model.screendesign:Form" id="4e85d128-c081-4386-91e6-f2aa0a893769" logicalName="Form01" name="Form01">
+          <theContainedElements xsi:type="model.screendesign:ScreenItemGroup" id="1147d50c-b83f-41ec-9f73-6f074df14f2a" logicalName="employeeList" name="employeeList" theRelatedScopeField="2f7e5f7c-8379-4808-9559-542d9438098d">
+            <theContainedElements xsi:type="model.screendesign:ScreenItem" id="913021e8-f50e-41e1-8e04-90940f1861e4" logicalName="item01" name="field01" theRelatedScopeField="2f7e5f7c-8379-4808-9559-542d9438098d">
+              <thePathOfBeanFieldUsages id="290f6f47-feef-427b-8991-594aca928794" theField="2f7e5f7c-8379-4808-9559-542d9438098d"/>
+              <thePathOfBeanFieldUsages id="5cc11ee5-e63e-4e54-9552-c72566402042" theField="c3fdeeb5-6d63-4d32-aea9-b9d9c13e367c"/>
+            </theContainedElements>
+            <theContainedElements xsi:type="model.screendesign:ScreenItem" id="8dc79545-8b0c-4cdb-b811-c9e487b66690" logicalName="item02" name="field02" theRelatedScopeField="2f7e5f7c-8379-4808-9559-542d9438098d">
+              <thePathOfBeanFieldUsages id="9ce9dd38-b7e6-4f27-89fe-fc4a089c9b71" theField="2f7e5f7c-8379-4808-9559-542d9438098d"/>
+              <thePathOfBeanFieldUsages id="b87f9da0-049b-425d-9055-72b20f074eca" theField="ca43a051-5c2d-4d11-875a-649ea6434695"/>
+            </theContainedElements>
+            <theContainedElements xsi:type="model.screendesign:ScreenItem" id="dbaf7883-1841-4b67-b9e3-9df96397a186" logicalName="item03" name="field03" theRelatedScopeField="2f7e5f7c-8379-4808-9559-542d9438098d">
+              <thePathOfBeanFieldUsages id="c6922fdf-6b2f-4dc3-9d07-89bf66e5bc8c" theField="2f7e5f7c-8379-4808-9559-542d9438098d"/>
+              <thePathOfBeanFieldUsages id="c5aaf716-545e-4e15-8c9c-240bc646756a" theField="d51dff5f-2937-4894-a9c5-294b9e8e1e9c"/>
+            </theContainedElements>
+            <thePathOfBeanFieldUsages id="8b4264a4-1152-4d6d-9c90-a3ef4cd0ceaa" theField="2f7e5f7c-8379-4808-9559-542d9438098d"/>
+          </theContainedElements>
+          <theContainedElements xsi:type="model.screendesign:ButtonLink" id="2e5af0af-97de-4c5d-af8d-accc21e5dd70" logicalName="pageLink" name="pageLink" connectionType="PAGE_LINK" theRelatedTransition="d4d9faf5-0b56-43c9-9f61-526f7d73f76d" thePageLinkTable="1147d50c-b83f-41ec-9f73-6f074df14f2a">
+            <thePageLinkTotal id="eca12a37-1d3b-4480-8e5d-a86b14df39d0" theRelatedScopeField="2b711079-91bc-4c2d-99aa-8b44c151dfbb">
+              <thePathOfBeanFieldUsages id="827abcaa-df21-4f87-8333-5103de11ad2b" theField="2b711079-91bc-4c2d-99aa-8b44c151dfbb"/>
+            </thePageLinkTotal>
+            <thePageLinkIndex id="a71e02bb-1c1d-45c8-b7c9-27c625642a21" theRelatedScopeField="1f0183c9-3917-4a1a-b6bc-fdb918ebb94b">
+              <thePathOfBeanFieldUsages id="2b78883d-a14c-4993-8d5d-858e50440c93" theField="1f0183c9-3917-4a1a-b6bc-fdb918ebb94b"/>
+            </thePageLinkIndex>
+            <thePageLinkRow id="d96261ec-e81c-4c29-a65c-ba4c0914d1b3" theRelatedScopeField="602bd3a5-6f1a-4547-9549-1bc301e2abe2">
+              <thePathOfBeanFieldUsages id="232fa40e-a64a-4681-8b91-a817d08cb568" theField="602bd3a5-6f1a-4547-9549-1bc301e2abe2"/>
+            </thePageLinkRow>
+          </theContainedElements>
+        </theContainedElements>
+        <theOutgoingTransitions id="d4d9faf5-0b56-43c9-9f61-526f7d73f76d" logicalName="PageLinkTransaction" name="PageLinkTransaction" theActionSet="7390d974-353e-446d-857c-0815136dc2b1" theDestination="f3232d37-ab91-4f97-b615-f81a0a6d05a3"/>
+      </theContainedElements>
+    </theContainedElements>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="68211ff6-91b5-454c-903b-47cfc3bc18bb" logicalName="Action" name="ActionDefinition" kind="ActionDefinition">
+      <theContainedElements xsi:type="model.action:Action" id="7390d974-353e-446d-857c-0815136dc2b1" logicalName="pageAction" name="pageAction" theUsingBLogic="49de12c2-3dec-4ba1-a8fa-96bfd0dba48f"/>
+      <theContainedElements xsi:type="model.action:Action" id="42ce0c6e-b1e2-4ee8-a830-e525c6db3abc" logicalName="Initial" name="Initial" theUsingBLogic="43b5d407-bf30-4dd2-9908-c283e621a6f7"/>
+    </theContainedElements>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="c3c8c3ff-647e-477b-92a4-13c729920b36" logicalName="BLogic class" name="BLogicDefinition" kind="BLogicDefinition">
+      <theContainedElements xsi:type="model.action:BLogic" id="49de12c2-3dec-4ba1-a8fa-96bfd0dba48f" logicalName="PageLink" name="PageLinkBLogic">
+        <theOwnedOutputBean id="2e94b10c-b89d-4852-8c59-4f92d236711f" logicalName="PageLink" name="PageLinkOutputBean">
+          <theContainedElements xsi:type="model.scope:IOBeanField" id="fd1c3001-a7d4-45ca-a11d-7ce47360d220" logicalName="row" name="row" aliasType="String" type="String" theRelatedScopeField="602bd3a5-6f1a-4547-9549-1bc301e2abe2"/>
+          <theContainedElements xsi:type="model.scope:IOBeanField" id="9916285d-649a-488d-9613-e8e5beebd410" logicalName="start" name="start" aliasType="String" type="String" theRelatedScopeField="1f0183c9-3917-4a1a-b6bc-fdb918ebb94b"/>
+          <theContainedElements xsi:type="model.scope:IOBeanField" id="211839b0-309e-4eed-8d3d-fcdf52aca7f4" logicalName="total" name="total" aliasType="String" type="String" theRelatedScopeField="2b711079-91bc-4c2d-99aa-8b44c151dfbb"/>
+          <theContainedElements xsi:type="model.scope:IOBeanField" id="d602be33-50a9-4d8c-8738-28f6a65a051d" logicalName="employeeDetail" name="employeeDetail" lower="0" upper="*" theType="b5b5d56f-a684-4813-8cb0-6b31e2e090b5" theRelatedScopeField="2f7e5f7c-8379-4808-9559-542d9438098d"/>
+        </theOwnedOutputBean>
+        <theOwnedInputBean id="9dc823fe-df77-40a0-927b-a754ace3184b" logicalName="PageLink" name="PageLinkInputBean">
+          <theContainedElements xsi:type="model.scope:IOBeanField" id="d6a987d4-ab4a-4357-84c4-65dc9e327d90" logicalName="row" name="row" aliasType="String" type="String" theRelatedScopeField="602bd3a5-6f1a-4547-9549-1bc301e2abe2"/>
+          <theContainedElements xsi:type="model.scope:IOBeanField" id="7c3e8619-0e71-4108-9210-04c3cfc1f9d2" logicalName="start" name="start" aliasType="String" type="String" theRelatedScopeField="1f0183c9-3917-4a1a-b6bc-fdb918ebb94b"/>
+          <theContainedElements xsi:type="model.scope:IOBeanField" id="3d1555f8-dfac-4ca3-ad7a-bae98cf43f1d" logicalName="total" name="total" aliasType="String" type="String" theRelatedScopeField="2b711079-91bc-4c2d-99aa-8b44c151dfbb"/>
+          <theContainedElements xsi:type="model.scope:IOBeanField" id="81dfde7a-f57c-4cab-887b-7a4385cc7ce4" logicalName="employeeDetail" name="employeeDetail" lower="0" upper="*" theType="b5b5d56f-a684-4813-8cb0-6b31e2e090b5" theRelatedScopeField="2f7e5f7c-8379-4808-9559-542d9438098d"/>
+        </theOwnedInputBean>
+      </theContainedElements>
+      <theContainedElements xsi:type="model.action:BLogic" id="43b5d407-bf30-4dd2-9908-c283e621a6f7" logicalName="Initial" name="InitialBLogic">
+        <theOwnedOutputBean id="50daec64-441e-42ac-86ff-dc29c4328808" logicalName="Initial" name="InitialOutputBean">
+          <theContainedElements xsi:type="model.scope:IOBeanField" id="3c6bee2f-08d9-466f-a447-2d975541b780" logicalName="row" name="row" aliasType="String" type="String" theRelatedScopeField="602bd3a5-6f1a-4547-9549-1bc301e2abe2"/>
+          <theContainedElements xsi:type="model.scope:IOBeanField" id="33457ba0-bd55-45ec-9987-10c915e0de53" logicalName="start" name="start" aliasType="String" type="String" theRelatedScopeField="1f0183c9-3917-4a1a-b6bc-fdb918ebb94b"/>
+          <theContainedElements xsi:type="model.scope:IOBeanField" id="4e8e7720-efb9-4cd3-9411-25acb9190a1f" logicalName="total" name="total" aliasType="String" type="String" theRelatedScopeField="2b711079-91bc-4c2d-99aa-8b44c151dfbb"/>
+          <theContainedElements xsi:type="model.scope:IOBeanField" id="fb0d335a-a321-4b7e-a447-f50635076ce7" logicalName="employeeDetail" name="employeeDetail" lower="0" upper="*" theType="b5b5d56f-a684-4813-8cb0-6b31e2e090b5" theRelatedScopeField="2f7e5f7c-8379-4808-9559-542d9438098d"/>
+        </theOwnedOutputBean>
+        <theOwnedInputBean id="ccf4ccc5-fefd-452b-b7ad-278645d19f3e" logicalName="Initial" name="InitialInputBean"/>
+      </theContainedElements>
+    </theContainedElements>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="15df91e6-d09b-4a1b-bf88-3a3ed4187e5c" logicalName="Action form" name="ActionForm" kind="ActionForm">
+      <theContainedElements xsi:type="model.scope:ActionFormClass" id="1b836b7c-0905-4cf3-8fdb-1ae2aca110a5" logicalName="PageModuleForm" name="PageModuleForm" isOptimizedActionForm="true">
+        <theContainedElements xsi:type="model.scope:ActionFormField" id="602bd3a5-6f1a-4547-9549-1bc301e2abe2" logicalName="row" name="row" aliasType="String" type="String"/>
+        <theContainedElements xsi:type="model.scope:ActionFormField" id="1f0183c9-3917-4a1a-b6bc-fdb918ebb94b" logicalName="start" name="start" aliasType="String" type="String"/>
+        <theContainedElements xsi:type="model.scope:ActionFormField" id="2b711079-91bc-4c2d-99aa-8b44c151dfbb" logicalName="total" name="total" aliasType="String" type="String"/>
+        <theContainedElements xsi:type="model.scope:ActionFormField" id="2f7e5f7c-8379-4808-9559-542d9438098d" logicalName="employeeDetail" name="employeeDetail" lower="0" upper="*" theType="b5b5d56f-a684-4813-8cb0-6b31e2e090b5"/>
+      </theContainedElements>
+    </theContainedElements>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="92ae9f9c-99fc-4534-8e6f-7c8be2cbcc6f" logicalName="Session" name="Session" kind="SessionDefinition">
+      <theContainedElements xsi:type="model.scope:Session" id="8502cde0-ef41-4828-9a04-18eae9a7e0a4" logicalName="Session list" name="Session"/>
+    </theContainedElements>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="9ced10fb-1d4c-4847-b6ad-7e9a12e1a273" logicalName="Request" name="Request" kind="RequestDefinition">
+      <theContainedElements xsi:type="model.scope:Request" id="8ee92a23-be6d-4bcc-ba61-5ef50f601ac5" logicalName="Request list" name="Request"/>
+    </theContainedElements>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="ad7b09a2-00de-4bf8-9805-8b97009db113" logicalName="Correlation item validation class" name="MultiFieldValidator" kind="MultiFieldValidator"/>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="6008ac80-8e43-4055-bb84-6fd87c444858" logicalName="Codelist" name="CodeList" kind="CodeList"/>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="f0116811-125b-4312-a669-e3c3b6c3ca46" logicalName="Message" name="MessageDefinition" kind="MessageDefinition"/>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="ea72af6a-3a22-4a0a-a07f-a972e836dec1" logicalName="Java bean" name="JavaBeanDefinition" kind="JavaBean">
+      <theContainedElements xsi:type="model.javabean:BeanClass" id="b5b5d56f-a684-4813-8cb0-6b31e2e090b5" logicalName="EmployeeDetail" name="EmployeeDetail">
+        <theContainedElements xsi:type="model.javabean:BeanField" id="c3fdeeb5-6d63-4d32-aea9-b9d9c13e367c" logicalName="name" name="name" aliasType="String" type="String"/>
+        <theContainedElements xsi:type="model.javabean:BeanField" id="ca43a051-5c2d-4d11-875a-649ea6434695" logicalName="address" name="address" aliasType="String" type="String"/>
+        <theContainedElements xsi:type="model.javabean:BeanField" id="d51dff5f-2937-4894-a9c5-294b9e8e1e9c" logicalName="phoneNo" name="phoneNo" aliasType="String" type="String"/>
+      </theContainedElements>
+    </theContainedElements>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="af29d2e0-f9ea-4669-9b90-0c2d47c4a4a8" logicalName="DTO class" name="DTOClass" kind="DTOClass"/>
+    <theProjectRoot href="PagingAppRoot.trip#a92c3f6a-6ac8-4070-a5ac-2379fb561fae" name="PagingAppRoot" logicalName="PagingApplication root"/>
+  </model.module:ModuleRoot>
+  <notation:Diagram type="IDE3_ModelID" element="480102f8-887a-40e3-b952-fcbb2a965a9e" measurementUnit="Pixel">
+    <children xsi:type="notation:Shape" type="2005" element="6c939c3a-f509-4a9d-8f23-f68774811db4" fontName="Segoe UI">
+      <children xsi:type="notation:DecorationNode" type="5005">
+        <layoutConstraint xsi:type="notation:Location" y="5"/>
+      </children>
+      <layoutConstraint xsi:type="notation:Bounds" x="208" y="14"/>
+    </children>
+    <children xsi:type="notation:Shape" type="2003" element="f3232d37-ab91-4f97-b615-f81a0a6d05a3" fontName="Segoe UI">
+      <children xsi:type="notation:DecorationNode" type="5003"/>
+      <children xsi:type="notation:DecorationNode" type="5007"/>
+      <layoutConstraint xsi:type="notation:Bounds" x="156" y="144" width="254"/>
+    </children>
+    <styles xsi:type="notation:DiagramStyle"/>
+    <edges xsi:type="notation:Connector" type="4001" element="d4d9faf5-0b56-43c9-9f61-526f7d73f76d" source="/1/@children.1" target="/1/@children.1">
+      <children xsi:type="notation:DecorationNode" type="6001">
+        <layoutConstraint xsi:type="notation:Location" y="40"/>
+      </children>
+      <children xsi:type="notation:DecorationNode" type="6002">
+        <layoutConstraint xsi:type="notation:Location" y="60"/>
+      </children>
+      <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" points="[2, -8, 49, -49]$[84, -8, 131, -49]$[84, 135, 131, 94]$[-60, 135, -13, 94]$[-48, 43, -1, 2]"/>
+      <sourceAnchor xsi:type="notation:IdentityAnchor" id="(0.9921259842519685,0.4266666666666667)"/>
+      <targetAnchor xsi:type="notation:IdentityAnchor" id="(0.8070866141732284,0.9733333333333334)"/>
+    </edges>
+    <edges xsi:type="notation:Connector" type="4001" element="b0b55f25-e82c-4a7d-829c-61c042c88769" source="/1/@children.0" target="/1/@children.1">
+      <children xsi:type="notation:DecorationNode" type="6001">
+        <layoutConstraint xsi:type="notation:Location" y="40"/>
+      </children>
+      <children xsi:type="notation:DecorationNode" type="6002">
+        <layoutConstraint xsi:type="notation:Location" y="60"/>
+      </children>
+      <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" points="[2, 20, -53, -127]$[-72, 149, -127, 2]"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>

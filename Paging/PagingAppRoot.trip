@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model.core="http:///model/core.ecore" xmlns:model.scope="http:///model/scope.ecore" xmlns:model.screenflow="http:///model/screenflow.ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <model.core:ProjectRoot id="a92c3f6a-6ac8-4070-a5ac-2379fb561fae" logicalName="PagingApplication root" name="PagingAppRoot" actionConfigFilePath="/Paging/config/ActionConfig.properties" basePackageName="jp.co.nttdata.project" blogicGenFolder="src" dynamicWebProject="Paging" entityTypeFilePath="/Paging/config/EntityType.properties" forwardConfigFilePath="/Paging/config/ForwardConfig.properties" jspCharacterEncoding="UTF-8" jspTemplateFilePath="/Paging/config/PageTemplate.jsp" prefixSuffixConfigurationFilePath="/Paging/config/PrefixSuffix_Configuration.xml" srcGenFolder="src-gen" validationCheckRuleFilePath="/Paging/config/ValidationCheckRule.xml" webContentFolder="WebContent" webDisplayName="Paging">
+    <theContainedElements xsi:type="model.screenflow:MainFlowDefinition" id="162c1faf-ec27-40dd-9d1b-4d36c91e2587" logicalName="PagingApplication rootScreen flow" name="PagingAppRootScreenFlow">
+      <theContainedElements xsi:type="model.core:DiagramElement" id="f62911e3-881d-4025-a9f8-421d3bad8cc0" name="PagingApplication rootScreen flow"/>
+    </theContainedElements>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="178a508a-9b6e-43c9-9979-fd9a2cdb60b7" logicalName="Action" name="ActionDefinition" kind="ActionDefinition"/>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="c6b1c9d5-ed2e-4720-8156-d364923f2c24" logicalName="BLogic class" name="BLogicDefinition" kind="BLogicDefinition"/>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="b1725572-7232-4572-83f9-959d41b19bf5" logicalName="Action form" name="ActionForm" kind="ActionForm">
+      <theContainedElements xsi:type="model.scope:ActionFormClass" id="3a2a8a38-14bf-48e3-9012-e1fac04d8bb6" logicalName="PagingApplication rootForm" name="PagingAppRootForm" isOptimizedActionForm="true"/>
+    </theContainedElements>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="8c5f536a-1508-413c-aea0-dded3d669978" logicalName="Session" name="Session" kind="SessionDefinition">
+      <theContainedElements xsi:type="model.scope:Session" id="417193c9-4638-4264-b153-9d086d81e9c0" logicalName="Session list" name="Session"/>
+    </theContainedElements>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="f0f74a98-b8bf-4c83-bd43-b5596f28943a" logicalName="Request" name="Request" kind="RequestDefinition">
+      <theContainedElements xsi:type="model.scope:Request" id="bb228419-e158-400d-a415-bfca0dd92345" logicalName="Request list" name="Request"/>
+    </theContainedElements>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="7d3bb221-e6fb-49ea-821e-69016cf63d7b" logicalName="Correlation item validation class" name="MultiFieldValidator" kind="MultiFieldValidator"/>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="4e594b9d-d93c-4f9f-8ef3-91e1804111eb" logicalName="Codelist" name="CodeList" kind="CodeList"/>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="51ca606e-0705-4187-9bfd-3c61ae50f5c7" logicalName="Message" name="MessageDefinition" kind="MessageDefinition"/>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="16f3195e-0dae-4a31-a27b-c8c540e64b9e" logicalName="Java bean" name="JavaBeanDefinition" kind="JavaBean"/>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="d592f0e2-ffe1-4b2a-a6fe-8b0c0fb7c648" logicalName="DTO class" name="DTOClass" kind="DTOClass"/>
+    <theContainedElements xsi:type="model.core:DesignPhase" id="d449b736-1756-4c80-8c50-f4f80d87f2bf" logicalName="Entity" name="Entity" kind="Entity"/>
+  </model.core:ProjectRoot>
+  <notation:Diagram type="IDE3_ModelID" element="162c1faf-ec27-40dd-9d1b-4d36c91e2587" measurementUnit="Pixel">
+    <styles xsi:type="notation:DiagramStyle"/>
+  </notation:Diagram>
+</xmi:XMI>
